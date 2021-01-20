@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 259317,
+              "duration": 652199,
               "status": "passed"
             },
             "match": {
@@ -15,40 +15,22 @@
           },
           {
             "result": {
-              "duration": 133065,
+              "duration": 271800,
               "status": "passed"
             },
             "match": {
               "location": "TaggedHooksStepDefinition.setUP1()"
             }
-          },
-          {
-            "result": {
-              "duration": 135775,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.beforeFirst()"
-            }
           }
         ],
-        "line": 4,
-        "name": "This is First test",
+        "line": 3,
+        "name": "Free CRM Create a new deal scenario",
         "description": "",
-        "id": "test-tagged-hooks;this-is-first-test",
+        "id": "deal-data-creation;free-crm-create-a-new-deal-scenario",
         "after": [
           {
             "result": {
-              "duration": 54473,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.afterFirst()"
-            }
-          },
-          {
-            "result": {
-              "duration": 44919,
+              "duration": 468900,
               "status": "passed"
             },
             "match": {
@@ -57,7 +39,7 @@
           },
           {
             "result": {
-              "duration": 81175,
+              "duration": 127400,
               "status": "passed"
             },
             "match": {
@@ -70,273 +52,161 @@
         "steps": [
           {
             "result": {
-              "duration": 85898436,
+              "duration": 106590462800,
               "status": "passed"
             },
             "line": 5,
-            "name": "this is the first step",
+            "name": "user is already on Login Page",
             "match": {
-              "location": "TaggedHooksStepDefinition.this_is_the_first_step()"
+              "location": "DealsStepWithMapDefinition.user_already_on_login_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 98039,
+              "duration": 17407900,
               "status": "passed"
             },
             "line": 6,
-            "name": "this is the second step",
+            "name": "title of login page is Free CRM",
             "match": {
-              "location": "TaggedHooksStepDefinition.this_is_the_second_step()"
+              "location": "DealsStepWithMapDefinition.title_of_login_page_is_free_CRM()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 84479,
+              "duration": 517903500,
               "status": "passed"
             },
             "line": 7,
-            "name": "this is the third step",
+            "name": "user enters username and password",
             "match": {
-              "location": "TaggedHooksStepDefinition.this_is_the_third_step()"
+              "location": "DealsStepWithMapDefinition.user_enters_username_and_password(DataTable)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "balasureshkumar946@gmail.com",
+                  "Bala@15081995"
+                ],
+                "line": 9
+              }
+            ],
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@First"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 112120,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.setUP()"
-            }
           },
           {
             "result": {
-              "duration": 82098,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.setUP1()"
-            }
-          },
-          {
-            "result": {
-              "duration": 76810,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.beforeSecond()"
-            }
-          }
-        ],
-        "line": 10,
-        "name": "This is Second test",
-        "description": "",
-        "id": "test-tagged-hooks;this-is-second-test",
-        "after": [
-          {
-            "result": {
-              "duration": 92284,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.afterSecond()"
-            }
-          },
-          {
-            "result": {
-              "duration": 140453,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.tearDown1()"
-            }
-          },
-          {
-            "result": {
-              "duration": 66290,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 127029,
+              "duration": 10056626200,
               "status": "passed"
             },
             "line": 11,
-            "name": "this is the first step",
+            "name": "user clicks on login button",
             "match": {
-              "location": "TaggedHooksStepDefinition.this_is_the_first_step()"
+              "location": "DealsStepWithMapDefinition.user_clicks_on_login_button()"
             },
-            "keyword": "Given "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 88211,
+              "duration": 10013975900,
               "status": "passed"
             },
             "line": 12,
-            "name": "this is the second step",
+            "name": "user is on home page",
             "match": {
-              "location": "TaggedHooksStepDefinition.this_is_the_second_step()"
+              "location": "DealsStepWithMapDefinition.user_is_on_hopme_page()"
             },
-            "keyword": "When "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 88937,
+              "duration": 15804467200,
               "status": "passed"
             },
             "line": 13,
-            "name": "this is the third step",
+            "name": "user moves to new deal page",
             "match": {
-              "location": "TaggedHooksStepDefinition.this_is_the_third_step()"
+              "location": "DealsStepWithMapDefinition.user_moves_to_new_deals_page()"
             },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 9,
-            "name": "@Second"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 120620,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.setUP()"
-            }
           },
           {
             "result": {
-              "duration": 76143,
+              "duration": 34918060300,
               "status": "passed"
             },
+            "line": 14,
+            "name": "user enters deal details",
             "match": {
-              "location": "TaggedHooksStepDefinition.setUP1()"
-            }
+              "location": "DealsStepWithMapDefinition.user_enters_contacts_details(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "title",
+                  "amount",
+                  "probability",
+                  "commission"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "test deal1",
+                  "1000",
+                  "50",
+                  "10"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "test deal2",
+                  "2000",
+                  "60",
+                  "20"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "test deal3",
+                  "3000",
+                  "70",
+                  "30"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 67536,
+              "duration": 866052100,
               "status": "passed"
             },
+            "line": 20,
+            "name": "Close the browser",
             "match": {
-              "location": "TaggedHooksStepDefinition.beforeThird()"
-            }
-          }
-        ],
-        "line": 16,
-        "name": "This is Third test",
-        "description": "",
-        "id": "test-tagged-hooks;this-is-third-test",
-        "after": [
-          {
-            "result": {
-              "duration": 74866,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.afterThird()"
-            }
-          },
-          {
-            "result": {
-              "duration": 67355,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.tearDown1()"
-            }
-          },
-          {
-            "result": {
-              "duration": 66706,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TaggedHooksStepDefinition.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 69572,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "this is the first step",
-            "match": {
-              "location": "TaggedHooksStepDefinition.this_is_the_first_step()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 72834,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "this is the second step",
-            "match": {
-              "location": "TaggedHooksStepDefinition.this_is_the_second_step()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 71562,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "this is the third step",
-            "match": {
-              "location": "TaggedHooksStepDefinition.this_is_the_third_step()"
+              "location": "DealsStepWithMapDefinition.close_the_browser()"
             },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 15,
-            "name": "@Third"
           }
         ]
       }
     ],
-    "name": "Test Tagged Hooks",
+    "name": "Deal data creation",
     "description": "",
-    "id": "test-tagged-hooks",
+    "id": "deal-data-creation",
     "keyword": "Feature",
-    "uri": "/Users/NaveenKhunteta/Documents/workspace/FreeCrmBDDFramework/src/main/java/Features/taggedhooks.feature"
+    "uri": "C:/Users/Bala/Cucumber_Pull_Request/CucumberSeleniumFramework/src/main/java/Features/dealsmap.feature"
   }
 ]

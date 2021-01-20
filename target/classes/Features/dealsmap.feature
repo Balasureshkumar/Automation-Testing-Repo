@@ -6,7 +6,7 @@ Scenario: Free CRM Create a new deal scenario
 	When title of login page is Free CRM 
 	Then user enters username and password 
 		| username | password|
-		| naveenk | test@123 |
+		| balasureshkumar946@gmail.com | Bala@15081995 |
 		
 	Then user clicks on login button 
 	Then user is on home page 
