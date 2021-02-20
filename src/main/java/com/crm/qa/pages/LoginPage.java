@@ -1,5 +1,7 @@
 package com.crm.qa.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,10 +19,15 @@ public class LoginPage extends TestBase{
 	public LoginPage(){
 		PageFactory.initElements(driver, this);
 	}
-	public HomePage login(String un, String pwd){
+	public HomePage login(String un, String pwd) throws InterruptedException{
+		Thread.sleep(5000);
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+
 		username.sendKeys(un);
 		password.sendKeys(pwd);
+		
 		submit.click();
+		Thread.sleep(5000);
 		return new HomePage();
 		    	
 		    	

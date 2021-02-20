@@ -1,12 +1,16 @@
 package com.crm.qa.Testbase;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -60,14 +64,23 @@ public class TestBase {
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+	//	driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("url"));
 		
 	}
 	
-	
+	public void failedtest() {
+		
+		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	FileUtils.getFile(src, "C:\\Users\\Bala\\eclipse-workspace\\CRM\\FailedScreenshot\\Failedscreenshot.jpg");
+	}
+public void Passedtest() throws IOException {
+		
+		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	FileUtils.copyFile(src,new File( "C:\\Users\\Bala\\eclipse-workspace\\CRM\\PassedScreenshot\\Passedscreenshot.jpg"));
+	}
 	
 	
 	
