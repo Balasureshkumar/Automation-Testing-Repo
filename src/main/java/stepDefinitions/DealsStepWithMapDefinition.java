@@ -21,19 +21,66 @@ import junit.framework.Assert;
 public class DealsStepWithMapDefinition {
 
 	WebDriver driver;
+	
+	@Given("^user is present on Login Page$")
+	 public void user_present_on_login_page(){
+	      System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bala\\Downloads\\chromedriver_win32_6\\chromedriver.exe");
+	 driver = new ChromeDriver();
+	 driver.get("https:www.freecrm.com");
+		driver.findElement(By.xpath("/html/body/div[1]/header/div/nav/div[2]/div/a")).click();
 
-	@Given("^user is already on Login Page$")
-	public void user_already_on_login_page() throws InterruptedException {
-	      System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bala\\Downloads\\chromedriver_win32_5\\chromedriver.exe");
+	 }
+	
+	
+	 @When("^title of login page will be is Free CRM$")
+	 public void title_of_login_page_is_free_CRM(){
+	 String title = driver.getTitle();
+	 System.out.println(title);
+	// Assert.assertEquals("#1 Free CRM for Any Business: Online Customer Relationship Software", title);
+	 }
+	
+	 //Reg Exp:
+	 //1. \"([^\"]*)\"
+	 //2. \"(.*)\"
+	
+	 @Then("^user enters the credentials \"(.*)\" and \"(.*)\"$")
+	 public void user_enters_username_and_password(String username, String password){
+	 driver.findElement(By.name("email")).sendKeys(username);
+	 driver.findElement(By.name("password")).sendKeys(password);
+	 }
+	
+	 @Then("^user needs to clicks on login button$")
+	 public void userneeds_clicks_on_login_button() throws InterruptedException {
+		 WebElement loginBtn = driver.findElement(By.xpath("//*[@id=\"ui\"]/div/div/form/div/div[3]"));
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", loginBtn);
+			Thread.sleep(10000);
+	 }
+	
+	
+	 @Then("^user will navigate to home page$")
+	 public void user_will_navigate_to_home_page(){
+	 String title = driver.getTitle();
+		System.out.println("Home Page title ::" + title);
+		Assert.assertEquals("Cogmento CRM", title);
+	 }
+	 @Then("^need to quit$")
+		public void close_cuurent_the_browser() {
+			driver.quit();
+		}
+
+	@Given("^Already on Login Page$")
+	public void user_already__navigated_to_login_page() throws InterruptedException {
+	      System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bala\\Downloads\\chromedriver_win32_6\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://www.freecrm.com/index.html");
+		driver.get("https://www.freecrm.com");
 		Thread.sleep(10000);
-		driver.findElement(By.xpath("/html/body/div[1]/header/div/nav/div[2]/div/div[2]/ul/a")).click();
+		driver.findElement(By.xpath("/html/body/div[1]/header/div/nav/div[2]/div/a")).click();
 		Thread.sleep(10000);
 	}
 
-	@When("^title of login page is Free CRM$")
-	public void title_of_login_page_is_free_CRM() {
+	@When("^login page is Free CRM$")
+	public void title_of_login_page_is_Free_CRM() {
 		String title = driver.getTitle();
 		System.out.println(title);
 	//	Assert.assertEquals("#1 Free CRM for Any Business: Online Customer Relationship Software", title);
@@ -50,7 +97,7 @@ public class DealsStepWithMapDefinition {
 
 	}
 
-	@Then("^user clicks on login button$")
+	@Then("^clicks on login button$")
 	public void user_clicks_on_login_button() throws InterruptedException {
 		//*[@id="ui"]/div/div/form/div/div[3]
 		WebElement loginBtn = driver.findElement(By.xpath("//*[@id=\"ui\"]/div/div/form/div/div[3]"));
@@ -59,7 +106,7 @@ public class DealsStepWithMapDefinition {
 		Thread.sleep(10000);
 	}
 
-	@Then("^user is on home page$")
+	@Then("^is on home page$")
 	public void user_is_on_hopme_page() throws InterruptedException {
 		Thread.sleep(10000);
 		String title = driver.getTitle();
@@ -105,7 +152,7 @@ public class DealsStepWithMapDefinition {
 		
 	}
 
-	@Then("^Close the browser$")
+	@Then("^wants to close the browser$")
 	public void close_the_browser() {
 		driver.quit();
 	}
