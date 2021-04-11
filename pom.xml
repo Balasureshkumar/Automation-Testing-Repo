@@ -3,7 +3,7 @@
   <groupId>com.CRM</groupId>
   <artifactId>CRM</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  --<Creating a new branch)
+  <!-- Creating a new branch)-->
 <name>CRM</name>
 	<url>http://maven.apache.org</url>
 	<properties>
